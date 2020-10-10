@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4136886435
+    locked: 0
+  - name: Small Trees
+    uniqueID: 3153559095
+    locked: 0
+  - name: Medium Trees
+    uniqueID: 1472479617
+    locked: 0
+  - name: Houses
+    uniqueID: 1316196405
+    locked: 0
+  - name: Shops
+    uniqueID: 929356955
+    locked: 0
+  - name: Roads
+    uniqueID: 3596646291
+    locked: 0
+  - name: Street Lights
+    uniqueID: 4044126551
+    locked: 0
+  - name: Big Trees
+    uniqueID: 1380275427
+    locked: 0
+  - name: Apartment
+    uniqueID: 2294314341
+    locked: 0
+  - name: Hospital
+    uniqueID: 1695129619
+    locked: 0
+  - name: Black Mask
+    uniqueID: 781462341
+    locked: 0
+  - name: UI
+    uniqueID: 974853339
+    locked: 0
+  - name: Character
+    uniqueID: 953090805
+    locked: 0
