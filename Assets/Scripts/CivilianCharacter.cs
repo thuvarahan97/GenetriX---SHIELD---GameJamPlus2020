@@ -63,9 +63,9 @@ public class CivilianCharacter : MonoBehaviour
     void generateNeed()
     {
       float randomTime = Random.Range(10, 20);
-      CivilianNeed need = new CivilianNeed();
+      CivilianNeed need = new CivilianNeed(0);
       
-      Invoke("generateNeed", randTime);
+      Invoke("generateNeed", randomTime);
     }
 
 
