@@ -6,25 +6,26 @@ public class CivilianNeed : MonoBehaviour {
     // Start is called before the first frame update
     public string type;
     public float spentTime;
-    public float status; // CurfewWaiting, Waiting, Going, Process, end
+    public string status; // CurfewWaiting, Waiting, Going, Process, end
     public float happyValue; //Also Negative allowed
 
     public float minHappyValue;
     public string popMessage;
 
-    public string[][] needTypes = { { "Food", "Med" }, { "Event", "Study" }, { "Cinima", "Sports", "Visting" } };
+    public static string[][] needTypes = new string[][] { new string[] { "Food", "Med" }, new string[] { "Event", "Study" }, new string[] { "Cinima", "Sports", "Visting" } };
     public int levelValue, rValue, mValue;
-    public static const string[][][] needMessages = {
-        { { "I need to Buy Groceries" }, { "I need to Buy Meds" }
+    public static string[][][] needMessages = new string[][][] {
+        new string[][] { new string[] { "I need to Buy Groceries" }, new string[] { "I need to Buy Meds" }
         },
-        { { "I want to attend a Wedding", "I want to attend a Feunral" },
-        { "I want Study with my friend", "I am going Tution" }
+        new string[][] {  new string[] { "I want to attend a Wedding", "I want to attend a Feunral" },
+        new string[] { "I want Study with my friend", "I am going Tution" }
         },
-        { { "I whna watch Cinima" },
-        { "I am Going to Play Foodball", "I am Going to Play Foodball" },
-        { "I want Vist Maria" }
+        new string[][] { new string[] { "I whna watch Cinima" },
+        new string[] { "I am Going to Play Foodball", "I am Going to Play Foodball" },
+        new string[] { "I want Vist Maria" }
         }
     };
+    
     public CivilianNeed (int level) {
         levelValue = level;
         rValue = Random.Range (0, needMessages[level].Length);
