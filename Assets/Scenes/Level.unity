@@ -5750,8 +5750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401ebd09e4fbf9b42a79e51c15bdbfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entry: {fileID: 615125175}
-  target: {fileID: 206835239}
+  entry: {fileID: 1061929203}
+  target: {fileID: 1407797307}
 --- !u!195 &608134612
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5762,8 +5762,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 1
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -8506,8 +8506,6 @@ GameObject:
   - component: {fileID: 1136623400}
   - component: {fileID: 1136623402}
   - component: {fileID: 1136623401}
-  - component: {fileID: 1136623404}
-  - component: {fileID: 1136623403}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -25969,38 +25967,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &1136623403
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136623399}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
---- !u!114 &1136623404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136623399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1147426557
 GameObject:
   m_ObjectHideFlags: 0
@@ -29866,7 +29832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1407797307}
   m_Layer: 0
-  m_Name: Pos_IsolationCentre
+  m_Name: Pos_QuarantineCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
