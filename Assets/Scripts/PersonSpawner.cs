@@ -19,17 +19,19 @@ public class PersonSpawner : MonoBehaviour
     }
 
     void Start() {
-        // StartCoroutine (SpawnPerson(0.5f));
+        StartCoroutine (SpawnPerson(0.5f));
     }
 
-    // IEnumerator SpawnPerson(float time) {
-    //     yield return new WaitForSecondsRealtime (time);
+    IEnumerator SpawnPerson(float time) {
+        yield return new WaitForSecondsRealtime (time);
 
-    //     Vector3 temp = transform.position;
-    //     temp.x = Random.Range(x1, x2);
+        Vector3 temp = transform.position;
+        temp.x = -17.5f;
+        temp.y = 9.51f;
+        temp.y = 0;
 
-    //     Instantiate (person[Random.Range(0, corona.Length)], temp, Quaternion.identity);
+        Instantiate (person[Random.Range(0, person.Length)], temp, Quaternion.identity);
         
-    //     StartCoroutine (SpawnCorona(Random.Range(0.05f, 1.5f)));
-    // }
+        StartCoroutine (SpawnPerson(Random.Range(0.00001f, 1.5f)));
+    }
 }

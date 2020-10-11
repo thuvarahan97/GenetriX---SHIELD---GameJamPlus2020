@@ -9,6 +9,7 @@ public class SimpleAIMovement : MonoBehaviour
     [SerializeField] Transform target;
     NavMeshAgent agent;
     
+    
     void Awake()
     {
         Vector3 entryPosition = entry.transform.position;

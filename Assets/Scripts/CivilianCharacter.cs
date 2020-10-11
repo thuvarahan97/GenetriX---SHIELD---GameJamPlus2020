@@ -71,10 +71,10 @@ public class CivilianCharacter : MonoBehaviour
             }
         }
 
-        if(currentNeed == null || need.status == "CurfewWaiting" || need.status == "End"){
+        if(currentNeed == null || currentNeed.status == "CurfewWaiting" || currentNeed.status == "End"){
             if (needsList.Count>0)
             {
-                currentNeed = (from n in needsList where n.status ==  "Waiting" select n).ToList().First();
+                // currentNeed = (from n in needsList where n.status ==  "Waiting" select n).ToList().First();
             }
             else{
                 currentNeed = null;
@@ -91,7 +91,7 @@ public class CivilianCharacter : MonoBehaviour
         {
             coronaEeffect = 0;
             coronaEeffectedTime = 0;
-            isUnderTreatment = false;0
+            isUnderTreatment = false;
             isIsolation = false;
         }
     }
