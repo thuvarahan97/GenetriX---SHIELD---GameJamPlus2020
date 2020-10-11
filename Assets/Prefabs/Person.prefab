@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7069625098642472458}
   - component: {fileID: 608134614}
   - component: {fileID: 608134613}
+  - component: {fileID: 9120211419450987408}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -97,29 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401ebd09e4fbf9b42a79e51c15bdbfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entryLocations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetLocations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
 --- !u!195 &7069625098642472458
 NavMeshAgent:
@@ -180,3 +158,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &9120211419450987408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069625098642472462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00db43c10ad1eba419e02013bd2d323f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  homeCoordinateX: 0
+  homeCoordinateY: 0
+  currentCoordinateX: 0
+  currentCoordinateY: 0
+  moveSpeed: 0
+  isIsolation: 0
+  isUnderTreatment: 0
+  coronaEeffect: 0
+  coronaEeffectedTime: 0
+  treatmentSpeed: 0
+  speradingSpeed: 0.5
+  speradingParaK: -0.05
+  speradingParaA: 30
+  state: 
+  currentNeed: {fileID: 0}
+  needsList: []
+  currentCollisionCivilian: []

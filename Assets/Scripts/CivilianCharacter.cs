@@ -96,12 +96,12 @@ public class CivilianCharacter : MonoBehaviour
         }
     }
 
-    void generateNeedLvl0()
-    {
-      CivilianNeed need = new CivilianNeed(0);
-      needsList.Add(need);
-      Invoke("generateNeedLvl0", Random.Range(15, 30));
-    }
+    // void generateNeedLvl0()
+    // {
+    //   CivilianNeed need = new CivilianNeed(0);
+    //   needsList.Add(need);
+    //   Invoke("generateNeedLvl0", Random.Range(15, 30));
+    // }
 
     // void fulfillNeed(){
     //     if(currentNeed != null || currentNeed.state == "CurfewWaiting"){
@@ -114,12 +114,12 @@ public class CivilianCharacter : MonoBehaviour
     //     }
     // }
 
-    void generateNeedLvl12()
-    {
-      CivilianNeed need = new CivilianNeed(Random.Range(1, 3));
-      needsList.Add(need);
-      Invoke("generateNeedLvl12", Random.Range(10, 20));
-    }
+    // void generateNeedLvl12()
+    // {
+    //   CivilianNeed need = new CivilianNeed(Random.Range(1, 3));
+    //   needsList.Add(need);
+    //   Invoke("generateNeedLvl12", Random.Range(10, 20));
+    // }
 
     void EffectCorona(float eff){ // Called by Another CivilianCharacter
         if(coronaEeffect==0){
@@ -148,15 +148,16 @@ public class CivilianCharacter : MonoBehaviour
         }
     }
 
-    
-     void OnTriggerEnter(Collider col) {
-         Debug.Log ("civilianGObject");
-         currentCollisionCivilian.Add (col.gameObject);
-     }
- 
-     void OnCollisionExit (Collision col) {
-          currentCollisionCivilian.Remove (col.gameObject);
-     }
+    void OnTriggerEnter2D(Collider2D target) {
+        Debug.Log("fffffffffffff");
+        if (coronaEeffect > 0){
+            if (0.75 > Random.value )
+            { 
+                target.GetComponent<CivilianCharacter>().EffectCorona(coronaEeffect/10f);
+            }
+        }
+        coronaSocialSpreading();
+    }
 
 
 }
