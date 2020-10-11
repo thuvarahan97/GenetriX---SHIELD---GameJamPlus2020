@@ -9,13 +9,18 @@ public class TargetScore : MonoBehaviour
 {
 
     private Text happyLevel;
+    private Text coronaLevel;
     private int score = 0;
+    private int bad = 0;
     private Text successText;
+    private Text gameOverText;
 
     void Awake() {
         happyLevel = GameObject.Find("HappyLevel1").GetComponent<Text>();
+        coronaLevel = GameObject.Find("CoronaLevel1").GetComponent<Text>();
 
         successText = GameObject.Find("CompletedText").GetComponent<Text> ();
+        gameOverText = GameObject.Find("GameOverText").GetComponent<Text> ();
     }
     // Start is called before the first frame update
     void Start()
@@ -33,15 +38,30 @@ public class TargetScore : MonoBehaviour
         Vector3 targetPosition = playerScript.targetPosition;
         Vector3 thisPosition = transform.position;
         if (targetPosition == thisPosition) {
-            score = int.Parse(happyLevel.text);
-            score++;
-            happyLevel.text = score.ToString();
+            if (target.tag == "Good") {
+                score = int.Parse(happyLevel.text);
+                score++;
+                happyLevel.text = score.ToString();
+            }
+            
+            if (target.tag == "Corona") {
+                bad = int.Parse(coronaLevel.text);
+                bad++;
+                coronaLevel.text = bad.ToString();
+            }
             // target.gameObject.SetActive(false);
             Destroy(target.gameObject);
 
-            if (score >= 20) {
-                happyLevel.text = "20";
+            if (score >= 10) {
+                happyLevel.text = "10";
                 successText.text = "Level Complete !";
+                StartCoroutine (RestartGame());
+            }
+
+            if (bad >= 10) {
+                coronaLevel.text = "10";
+                gameOverText.text = "Game Over !";
+                StartCoroutine (RestartGame());
             }
         }
 

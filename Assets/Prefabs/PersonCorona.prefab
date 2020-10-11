@@ -96,6 +96,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PersonCorona
       objectReference: {fileID: 0}
+    - target: {fileID: 7069625098642472462, guid: 0fe8238c10338164bbd64eff708554c6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Corona
+      objectReference: {fileID: 0}
     - target: {fileID: 7069625098642472463, guid: 0fe8238c10338164bbd64eff708554c6,
         type: 3}
       propertyPath: m_Sprite
