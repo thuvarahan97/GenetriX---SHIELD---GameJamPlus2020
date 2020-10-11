@@ -80,3 +80,6 @@ TagManager:
   - name: Character
     uniqueID: 953090805
     locked: 0
+  - name: Curfew Region
+    uniqueID: 1503555835
+    locked: 0
