@@ -13,8 +13,12 @@ public class RectangleShape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    void OnMouseOver() {
         if (Input.GetMouseButtonDown(1)) {
-            Debug.Log("Pressed secondary button.");
+            Destroy(this.gameObject);
         }
     }
 }

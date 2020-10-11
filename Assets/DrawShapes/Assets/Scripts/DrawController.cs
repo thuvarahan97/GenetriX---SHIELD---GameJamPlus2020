@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
 /// <inheritdoc />
 /// <summary>
@@ -15,6 +16,10 @@ public class DrawController : MonoBehaviour
     public DrawShape RectanglePrefab;
     public DrawShape CirclePrefab;
     public DrawShape TrianglePrefab;
+
+
+    public GameObject NavMesh;
+
 
     // Associates a draw mode to the prefab to instantiate
     private Dictionary<DrawMode, DrawShape> _drawModeToPrefab;
@@ -43,6 +48,7 @@ public class DrawController : MonoBehaviour
 
         if (click) {
             AddShapeVertex(mousePos);
+            NavMesh.GetComponent<NavMeshSurface2d>().BuildNavMesh();
         } else if (canUpdateShape) {
             UpdateShapeVertex(mousePos);
         }
