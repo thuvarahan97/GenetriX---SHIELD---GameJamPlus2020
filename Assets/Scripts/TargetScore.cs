@@ -15,17 +15,24 @@ public class TargetScore : MonoBehaviour
     private Text successText;
     private Text gameOverText;
 
+    private GameObject successTextObj;
+    private GameObject gameOverTextObj;
+
     void Awake() {
         happyLevel = GameObject.Find("HappyLevel1").GetComponent<Text>();
         coronaLevel = GameObject.Find("CoronaLevel1").GetComponent<Text>();
 
+        successTextObj = GameObject.Find("CompletedText");
+        gameOverTextObj = GameObject.Find("GameOverText");
         successText = GameObject.Find("CompletedText").GetComponent<Text> ();
         gameOverText = GameObject.Find("GameOverText").GetComponent<Text> ();
+
     }
     // Start is called before the first frame update
     void Start()
     {
-
+                successTextObj.SetActive(false);
+                gameOverTextObj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,7 +61,10 @@ public class TargetScore : MonoBehaviour
 
             if (score >= 10) {
                 happyLevel.text = "10";
+                successTextObj.SetActive(true);
+                gameOverTextObj.SetActive(true);
                 successText.text = "Level Complete !";
+
                 StartCoroutine (RestartGame());
             }
 
@@ -69,6 +79,7 @@ public class TargetScore : MonoBehaviour
 
     IEnumerator RestartGame() {
         yield return new WaitForSecondsRealtime (2f);
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 608134614}
   - component: {fileID: 608134613}
   - component: {fileID: 9120211419450987408}
+  - component: {fileID: 930041987}
   m_Layer: 0
   m_Name: Person
   m_TagString: Good
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7069625098642472462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.5, y: 9.51, z: 0}
-  m_LocalScale: {x: 0.20429526, y: 0.20429526, z: 0.20429526}
+  m_LocalScale: {x: 2.6021118, y: 2.6021118, z: 2.6021118}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 953090805
   m_SortingLayer: 13
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aaa22f58068d690428d8728b65bffe65, type: 3}
+  m_Sprite: {fileID: -1802968333283652021, guid: ee7f951afd3e29141a75d3191b954fd9,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +159,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.12
 --- !u!114 &9120211419450987408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +189,22 @@ MonoBehaviour:
   currentNeed: {fileID: 0}
   needsList: []
   currentCollisionCivilian: []
+--- !u!95 &930041987
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069625098642472462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1287399ca3c89b34b8fd61de23021983, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
